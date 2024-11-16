@@ -100,7 +100,7 @@ function Join() {
         <div className="w-[full] h-[2030px] relative bg-[#fff8f8]">
             <div className="h-[1674px] px-[42px] pt-[54px] pb-[177px] left-[120px] top-[174px] absolute bg-white rounded-[5px] shadow flex-col justify-center items-center gap-2.5 inline-flex">
                 <form className="w-[1084px] h-[1443px] flex-col justify-center items-center gap-[65px] flex" onSubmit={handleSubmit}>
-                    <div className="self-stretch h-[61px] text-center text-black text-[50px] font-semibold font-['Pretendard']" >회원가입</div>
+                   <div className="self-stretch h-[61px] text-center text-black text-[50px] font-semibold font-['Pretendard']" >회원가입</div>
                     <div className="h-[134px] flex-col justify-start items-start gap-[18px] flex">
                         <div className="self-stretch text-black text-3xl font-semibold font-['Pretendard']">개인정보</div>
                         <div className="self-stretch h-20 flex-col justify-start items-start gap-[18px] flex">

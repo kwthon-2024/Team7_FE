@@ -14,14 +14,16 @@ import Write from './pages/community/Write';
 import DetailPage from "./pages/community/Detail";
 import Notice from './pages/Notice';
 import Post from './pages/Post';
+import Post2 from '/post2';
 import Pdf from './pages/pdf/Pdf';
 import Pdf2 from './pages/pdf/Pdf2';
+import Main from './pages/Main';
 
 function App() {
   return (
     <Routes>
 
-      {/* <Route element={<PublicRoute />}> */}
+      <Route element={<PublicRoute />}>
         <Route path="/join" element={<Join />} />
         <Route path="/login" element={<Login />} />
         <Route path="/community" element={<List />} />
@@ -31,10 +33,15 @@ function App() {
         <Route path="/post" element={<Post />} />
         <Route path="/pdf" element={<Pdf />} />
         <Route path="/pdf2" element={<Pdf2 />} />
+        <Route path="/login" element={<Login />} />
 
-      {/* </Route> */}
+      </Route>
 
       <Route element={<PrivateRoute />}>
+        <Route path="/" element={<Main />} />
+        <Route path="/notice" element={<Notice />} />
+        <Route path="/post" element={<Post />} />
+        <Route path="/post2" element={<Post2 />} />
       </Route>
     </Routes>
   );
