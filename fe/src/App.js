@@ -12,6 +12,8 @@ import Login from './pages/Login';
 import List from './pages/community/List';
 import Write from './pages/community/Write';
 import DetailPage from "./pages/community/Detail";
+import Notice from './pages/Notice';
+import Post from './pages/Post';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <Route path="/community" element={<List />} />
         <Route path="/community/write" element={<Write />} />
         <Route path="/community/:id" element={<DetailPage />} />
+        <Route path="/notice" element={<Notice />} />
+        <Route path="/post" element={<Post />} />
+        
       {/* </Route> */}
 
       <Route element={<PrivateRoute />}>

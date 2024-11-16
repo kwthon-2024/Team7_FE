@@ -81,7 +81,7 @@ function Login() {
 
 
     return (
-      <div className="w-[100%] h-[1024px] relative bg-[#fff8f8]">
+      <div className="w-[full] h-[1024px] relative bg-[#fff8f8]">
         <div className="w-[753px] h-[587px] left-[343px] top-[278px] absolute bg-white rounded-[15px] shadow" />
         <div className="w-[178px] h-[61px] left-[631px] top-[338px] absolute text-center text-black text-[50px] font-semibold font-['Pretendard']">로그인</div>
         <div className="w-[178px] h-[61px] left-[631px] top-[338px] absolute text-center text-black text-[50px] font-semibold font-['Pretendard']">로그인</div>
