@@ -15,6 +15,7 @@ import DetailPage from "./pages/community/Detail";
 import Notice from './pages/Notice';
 import Post from './pages/Post';
 import Main from './pages/Main';
+import Post2 from './pages/Post2';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Main />} />     
         <Route path="/notice" element={<Notice />} />
         <Route path="/post" element={<Post />} />  
+  <Route path="/post2" element={<Post2 />} /> 
 
       <Route element={<PrivateRoute />}>
 
