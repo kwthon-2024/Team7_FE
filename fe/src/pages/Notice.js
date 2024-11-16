@@ -44,7 +44,7 @@ function Login() {
 
 
     return (
-        <div className="w-[100%] h-[1061px] relative bg-[#fff8f8]">
+        <div className="w-[full] h-[1061px] relative bg-[#fff8f8]">
             <div className="w-[844px] h-[768px] left-[298px] top-[194px] absolute flex-col justify-start items-start inline-flex">
 
                 {/* 제목 입력 */}
