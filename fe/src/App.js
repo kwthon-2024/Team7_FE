@@ -14,6 +14,8 @@ import Write from './pages/community/Write';
 import DetailPage from "./pages/community/Detail";
 import Notice from './pages/Notice';
 import Post from './pages/Post';
+import Pdf from './pages/pdf/Pdf';
+import Pdf2 from './pages/pdf/Pdf2';
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
         <Route path="/community/:id" element={<DetailPage />} />
         <Route path="/notice" element={<Notice />} />
         <Route path="/post" element={<Post />} />
-        
+        <Route path="/pdf" element={<Pdf />} />
+        <Route path="/pdf2" element={<Pdf2 />} />
+
       {/* </Route> */}
 
       <Route element={<PrivateRoute />}>
