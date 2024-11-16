@@ -5,13 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css'; // Tailwind CSS 파일 import
 import React from 'react';
-import Login from './login/login';
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>
+  <BrowserRouter>
+        <App />
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
