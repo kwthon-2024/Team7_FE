@@ -30,71 +30,71 @@ function Join() {
 
     const handleChangeRole = (event) => {
         setFormData({
-          ...formData,
-          clubRole: event.target.value, // 선택된 값을 clubRole에 저장
+            ...formData,
+            clubRole: event.target.value, // 선택된 값을 clubRole에 저장
         });
-      };
+    };
 
     // 메인 페이지로 이동
-  const mainClick = () => {
-    console.log('로고 클릭');
-    navigate('/');
-  }
-
-  // 회원가입 페이지로 이동
-  const joinClick = () => {
-    console.log('회원가입 버튼 클릭');
-    navigate('/join');
-  }
-
-
-  // 로그인 페이지로 이동
-  const loginClick = () => {
-    console.log('로그인 버튼 클릭');
-    navigate('/login');
-  }
-
-  // 회원가입버튼 눌렀을 때 실행되는 함수
-  const handleSubmit = async (e) => {
-    console.log(formData);
-    e.preventDefault();
-
-    const password_REG = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
-
-    if (!password_REG.test(formData.password)) {
-        alert("비밀번호는 영어와 숫자를 포함한 8~20자리여야 합니다.");
-        return;
+    const mainClick = () => {
+        console.log('로고 클릭');
+        navigate('/');
     }
 
-    if (formData.password !== formData.passwordCheck) {
-        alert("비밀번호가 일치하지 않습니다.");
-        setFormData({ ...formData, passwordCheck: '' });
-        return;
+    // 회원가입 페이지로 이동
+    const joinClick = () => {
+        console.log('회원가입 버튼 클릭');
+        navigate('/join');
     }
 
-    let formDataToSend = { ...formData };
-    delete formDataToSend.passwordCheck;
 
-    formDataToSend = {
-        ...formDataToSend,
-        grade: Number(formData.grade), // studentNumber만 숫자로 변환
-      };
-
-    
-    // console.log(formDataToSend);
-
-    // 회원가입 요청
-    try {
-        const response = await axiosInstance.post(`${process.env.REACT_APP_DB_HOST}/api/users/sign-up`, formDataToSend, {
-            headers: { 'Content-Type': 'application/json' }
-        });
-        console.log(response)
-        
-        navigate("/login");
-    } catch (error) {
-        alert('회원가입에 실패했습니다.');
+    // 로그인 페이지로 이동
+    const loginClick = () => {
+        console.log('로그인 버튼 클릭');
+        navigate('/login');
     }
-};
+
+    // 회원가입버튼 눌렀을 때 실행되는 함수
+    const handleSubmit = async (e) => {
+        console.log(formData);
+        e.preventDefault();
+
+        const password_REG = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
+
+        if (!password_REG.test(formData.password)) {
+            alert("비밀번호는 영어와 숫자를 포함한 8~20자리여야 합니다.");
+            return;
+        }
+
+        if (formData.password !== formData.passwordCheck) {
+            alert("비밀번호가 일치하지 않습니다.");
+            setFormData({ ...formData, passwordCheck: '' });
+            return;
+        }
+
+        let formDataToSend = { ...formData };
+        delete formDataToSend.passwordCheck;
+
+        formDataToSend = {
+            ...formDataToSend,
+            grade: Number(formData.grade), // studentNumber만 숫자로 변환
+        };
+
+
+        // console.log(formDataToSend);
+
+        // 회원가입 요청
+        try {
+            const response = await axiosInstance.post(`${process.env.REACT_APP_DB_HOST}/api/users/sign-up`, formDataToSend, {
+                headers: { 'Content-Type': 'application/json' }
+            });
+            console.log(response)
+
+            navigate("/login");
+        } catch (error) {
+            alert('회원가입에 실패했습니다.');
+        }
+    };
 
     return (
         <div className="w-[1440px] h-[2030px] relative bg-[#fff8f8]">
@@ -143,19 +143,19 @@ function Join() {
                     </div>
                     <div className="h-[138px] flex-col justify-start items-start gap-[22px] flex">
                         <div className="self-stretch text-black text-3xl font-semibold font-['Pretendard']">직책</div>
-                        
+
                         <form className="self-stretch justify-center items-center gap-[23px] inline-flex">
-                            
+
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
                                 <input type="radio" id="option1" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="LEADER" checked={formData.clubRole === "LEADER"} onChange={handleChangeRole} />
                                 <label for="option1">회장</label>
                             </div>
-                            
+
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
                                 <input type="radio" id="option2" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="MEMBER" checked={formData.clubRole === "MEMBER"} onChange={handleChangeRole} />
                                 <label for="option2">부원</label>
                             </div>
-                            
+
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
                                 <input type="radio" id="option3" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="ADMIN" checked={formData.clubRole === "ADMIN"} onChange={handleChangeRole} />
                                 <label for="option3">총동아리연합회</label>
