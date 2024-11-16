@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../api/axios';
 import axios from 'axios';
-import GenerateImage from '.././aI.js';
+import GenerateImage from './ai.js';
 
 
 function Post2() {
@@ -240,13 +240,13 @@ function Post2() {
                         </button>
                     </div>
 
-{/* ------------------------------------------------------------------------------------------------------------------------------------ */}
+                    {/* ------------------------------------------------------------------------------------------------------------------------------------ */}
 
-<div className="w-[full] h-[3463px] relative bg-[#fff8f8]">
-            <GenerateImage />
-        </div>
-        </div>
-        </div>
+                    <div className="w-[full] h-[3463px] relative bg-[#fff8f8]">
+                        <GenerateImage />
+                    </div>
+                </div>
+            </div>
         </div>
 
     )

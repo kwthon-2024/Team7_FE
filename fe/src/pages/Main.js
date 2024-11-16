@@ -58,7 +58,7 @@ function Main() {
 
 
 
-    return (        
+    return (
         <div className="w-full h-[1956px] relative bg-[#fff8f8]">
             <div className="w-full h-[1058px] left-0 top-[172px] absolute bg-gradient-to-b from-[#fff8f8] via-[#f2dede] to-[#9d3535] rounded-bl-[150px] rounded-br-[150px]" />
             <div className="w-full h-[120px] px-[88px] py-[35px] left-0 top-0 absolute justify-end items-center gap-2.5 inline-flex">
@@ -70,7 +70,7 @@ function Main() {
             </div>
             <img className="w-[401px] h-[401px] left-[1122.68px] top-[1133px] absolute origin-top-left rotate-[22.69deg]" src={DEFAULT_IMAGE_2} />
             <img className="w-[367.35px] h-[367.35px] left-[44.99px] top-[1556.57px] absolute origin-top-left rotate-[-18.05deg]" src={DEFAULT_IMAGE_1} />
-            
+
             <div className="h-[1023px] left-[115px] top-[633px] absolute flex-col justify-start items-start gap-[23px] inline-flex">
                 <div className="self-stretch justify-start items-center gap-5 inline-flex">
                     <div className="w-[590px] h-[500px] relative" onClick={goNotices}>
