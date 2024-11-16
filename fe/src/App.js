@@ -9,6 +9,9 @@ import PublicRoute from './PublicRoute';
 
 import Join from './pages/Join';
 import Login from './pages/Login';
+import List from './pages/community/List';
+import Write from './pages/community/Write';
+import DetailPage from "./pages/community/Detail";
 import Notice from './pages/Notice';
 import Post from './pages/Post';
 
@@ -19,12 +22,15 @@ function App() {
       {/* <Route element={<PublicRoute />}> */}
         <Route path="/join" element={<Join />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/community" element={<List />} />
+        <Route path="/community/write" element={<Write />} />
+        <Route path="/community/:id" element={<DetailPage />} />
         <Route path="/notice" element={<Notice />} />
         <Route path="/post" element={<Post />} />
         
       {/* </Route> */}
 
-      <Route element={<PrivateRoute />}>            
+      <Route element={<PrivateRoute />}>
       </Route>
     </Routes>
   );
