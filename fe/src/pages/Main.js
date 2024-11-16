@@ -46,7 +46,7 @@ function Main() {
         console.log('계획 고');
         e.preventDefault();
 
-        navigate("/plan");
+        navigate("/post2");
     };
 
     const goPost = async (e) => {
