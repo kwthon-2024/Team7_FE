@@ -11,20 +11,22 @@ import Join from './pages/Join';
 import Login from './pages/Login';
 import Notice from './pages/Notice';
 import Post from './pages/Post';
+import Main from './pages/Main';
 
 function App() {
   return (
     <Routes>
 
-      {/* <Route element={<PublicRoute />}> */}
+      <Route element={<PublicRoute />}>
         <Route path="/join" element={<Join />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/notice" element={<Notice />} />
-        <Route path="/post" element={<Post />} />
         
-      {/* </Route> */}
+      </Route>
 
-      <Route element={<PrivateRoute />}>            
+      <Route element={<PrivateRoute />}>     
+        <Route path="/" element={<Main />} />     
+        <Route path="/notice" element={<Notice />} />
+        <Route path="/post" element={<Post />} />  
       </Route>
     </Routes>
   );
