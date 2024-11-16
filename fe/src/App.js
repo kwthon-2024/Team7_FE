@@ -10,6 +10,7 @@ import PublicRoute from './PublicRoute';
 import Join from './pages/Join';
 import Login from './pages/Login';
 import Notice from './pages/Notice';
+import Post from './pages/Post';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/login" element={<Login />} />
         <Route path="/notice" element={<Notice />} />
+        <Route path="/post" element={<Post />} />
+        
       {/* </Route> */}
 
       <Route element={<PrivateRoute />}>            

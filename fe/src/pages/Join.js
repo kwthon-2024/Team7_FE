@@ -97,7 +97,7 @@ function Join() {
     };
 
     return (
-        <div className="w-[1440px] h-[2030px] relative bg-[#fff8f8]">
+        <div className="w-[full] h-[2030px] relative bg-[#fff8f8]">
             <div className="h-[1674px] px-[42px] pt-[54px] pb-[177px] left-[120px] top-[174px] absolute bg-white rounded-[5px] shadow flex-col justify-center items-center gap-2.5 inline-flex">
                 <form className="w-[1084px] h-[1443px] flex-col justify-center items-center gap-[65px] flex" onSubmit={handleSubmit}>
                     <div className="self-stretch h-[61px] text-center text-black text-[50px] font-semibold font-['Pretendard']" >회원가입</div>
@@ -147,17 +147,17 @@ function Join() {
                         <form className="self-stretch justify-center items-center gap-[23px] inline-flex">
 
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
-                                <input type="radio" id="option1" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="LEADER" checked={formData.clubRole === "LEADER"} onChange={handleChangeRole} />
+                                <input type="radio" id="option1" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="ROLE_LEADER" checked={formData.clubRole === "ROLE_LEADER"} onChange={handleChangeRole} />
                                 <label for="option1">회장</label>
                             </div>
 
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
-                                <input type="radio" id="option2" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="MEMBER" checked={formData.clubRole === "MEMBER"} onChange={handleChangeRole} />
+                                <input type="radio" id="option2" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="ROLE_MEMBER" checked={formData.clubRole === "ROLE_MEMBER"} onChange={handleChangeRole} />
                                 <label for="option2">부원</label>
                             </div>
 
                             <div className="grow shrink basis-0 h-20 px-[100px] py-[25px] rounded-[10px] border-2 border-[#d9d9d9] justify-start items-center gap-2.5 flex">
-                                <input type="radio" id="option3" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="ADMIN" checked={formData.clubRole === "ADMIN"} onChange={handleChangeRole} />
+                                <input type="radio" id="option3" name="option" className="text-[#d9d9d9] text-[25px] font-normal font-['Pretendard']" value="ROLE_ADMIN" checked={formData.clubRole === "ROLE_ADMIN"} onChange={handleChangeRole} />
                                 <label for="option3">총동아리연합회</label>
                             </div>
 
