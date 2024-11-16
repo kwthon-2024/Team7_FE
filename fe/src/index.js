@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css'; // Tailwind CSS 파일 import
 import React from 'react';
-import Login from '../../login/login';
+import Login from './login/login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
