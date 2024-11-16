@@ -9,6 +9,9 @@ import PublicRoute from './PublicRoute';
 
 import Join from './pages/Join';
 import Login from './pages/Login';
+import List from './pages/community/List';
+import Write from './pages/community/Write';
+import DetailPage from "./pages/community/Detail";
 import Notice from './pages/Notice';
 import Post from './pages/Post';
 import Main from './pages/Main';
@@ -19,7 +22,7 @@ function App() {
 
       <Route element={<PublicRoute />}>
         <Route path="/join" element={<Join />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />   
         
       </Route>
 
@@ -27,6 +30,9 @@ function App() {
         <Route path="/" element={<Main />} />     
         <Route path="/notice" element={<Notice />} />
         <Route path="/post" element={<Post />} />  
+
+      <Route element={<PrivateRoute />}>
+
       </Route>
     </Routes>
   );
